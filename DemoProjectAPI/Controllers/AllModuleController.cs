@@ -22,4 +22,22 @@ namespace DemoProjectAPI.Controllers
         }
     }
 
+    public class VideoMasterController: ApiController
+    {
+        [HttpPost]
+        public VideoMasterStatus VideoMaster(VideoMasterDTO dto)
+        {
+            return new AllModuleRepository().VideoMaster(dto);
+        }
+    }
+
+    public class ShareVideoMasterController: ApiController
+    {
+        [HttpPost]
+        public ShareVideoInsertStatus ShareVideoMaster(ShareVideoInsetDTO shareVideoInsetDTO)
+        {
+            return new AllModuleRepository().ShareVideoMaster(shareVideoInsetDTO);
+        }
+    }
+
 }
